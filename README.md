@@ -17,11 +17,11 @@ To achieve this I used several libraries
 
 I created a 
 <ul>
-    <li><b>Home page</b>: Here you can search the artists and click in any of them in order to sse more details about the artists or the album. For this I used a form with the two functions onChange() and onSubmit() and i sent the search value to the query in order to get the results if exists. Then, I created a map with the results in order to print every each of them.
+    <li><b>Home page</b>: Here you can search the artists and click in any of them in order to see more details about the artists or the album. For this I used a form with the two functions onChange() and onSubmit() and i sent the search value to the query in order to get the results if exists. Then, I created a map with the results in order to print every each of them.
     </li>
     <li><b>Artist details page</b>: Here you can see the details of the artists, a small list of the releases and the most important you can add this artist to your favorites. For this I got the 'mbid' from the home page for the specific artist and I did a new query in order to get the artist details and the releases. Also, I used redux in order to add/remove the artist to/from my favorites sidebar and local storage in case we refresh the page to keep save the favorites.</li>
     <li><b>Album details page</b>: Here you can see the details of the Album. For this I got the 'mbid' from the home page for the specific artist and I did a new query in order to get the album details</li>
-    <li><b>Sidebar</b>: In this page you can see all the favorites if exists and also you can see this sidebar in every page and also you remove the favorite from every page.</li>
+    <li><b>Sidebar</b>: In this page you can see all the favorites if exists. Also, you can see this sidebar in every page. In addition you can remove the favorite from every page and you can click on it in order to send you to this specific artist details.</li>
 </ul>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
