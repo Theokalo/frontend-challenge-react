@@ -52,7 +52,7 @@ class SrcItem extends Component {
                             if(error) console.log(error);
                             console.log(data);
 
-                            const { id, sortName, country, gender, type} = data.lookup.artist;
+                            const {sortName, country, gender, type} = data.lookup.artist;
 
                             return <Fragment>
                                 <div className="card card-body mb-3">
@@ -66,7 +66,7 @@ class SrcItem extends Component {
                                             <h5>Type: {type}</h5>
                                         </div>
                                         <div className="col-md-2">
-                                        <button className="btn btn-secondary" onClick={()=>{this.handleClick(id,sortName);ToastsStore.success(sortName+" has been added to your favorites")}}>
+                                        <button className="btn btn-secondary" onClick={()=>{this.handleClick(mbid,sortName);ToastsStore.success(sortName+" has been added to your favorites")}}>
                                             <img src={FavoriteIcon} alt="Artists" style={{ width: 50, display: 'block', margin: 'auto' }} />
                                         </button>
                                         <ToastsContainer store={ToastsStore}/>

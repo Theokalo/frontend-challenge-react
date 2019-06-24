@@ -4,12 +4,14 @@ import { connect } from 'react-redux'
 import { removeItem} from './actions/cartActions';
 import MyLogo from '../mylogo.png';
 import {ToastsContainer, ToastsStore} from 'react-toasts';
+import '../App.css';
 
 class Sidebar extends Component {
 
     //to remove the item completely
-    handleRemove = (id)=>{
+    handleRemove = (id, name)=>{
         this.props.removeItem(id);
+        ToastsStore.error(name+" has been removed from your favorites");
     }
     
     render() {
@@ -20,10 +22,10 @@ class Sidebar extends Component {
                    
                    <div key={item.id}>
                         <div className="item-desc">
-                            <span className="title">{item.name}</span>
+                            <a href={`/srcitem/${item.id}`} className="link"><span className="title">{item.name}</span></a>
                             <div className="add-remove">
                             </div>
-                            <button className="waves-effect waves-light btn pink remove" onClick={()=>{this.handleRemove(item.id);ToastsStore.error(item.name+" has been removed from your favorites")}}>Remove</button>
+                            <button className="waves-effect waves-light btn pink remove" onClick={()=>{this.handleRemove(item.id, item.name)}}>Remove</button>
                             <ToastsContainer store={ToastsStore}/>
                         </div>
                                 

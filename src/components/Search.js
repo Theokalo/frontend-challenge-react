@@ -9,7 +9,7 @@ const SEARCH_QUERY = gql`
 query SearchQuery($res: String!)
     {
         search {
-            artists(query: $res) {
+            artists(query: $res, first: 50) {
                 nodes {
                 id
                 name
@@ -46,7 +46,7 @@ export class Search extends Component{
         e.preventDefault();
         var res = this.state;
         this.setState({ search: res });
-    }, 3500)
+    }, 1500)
 
     
     
@@ -78,6 +78,7 @@ export class Search extends Component{
                             console.log(data);
                             
                             return <Fragment>
+                                <h4>Total results: {data.search.artists.nodes.length}</h4>
                                 {
                                     data.search.artists.nodes.map(src => (
                                     <SearchItem key={src.mbid} src={src}/>
