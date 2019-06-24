@@ -1,3 +1,6 @@
+##Heroku
+<a href="https://frondend-challenge-app.herokuapp.com/" target="_blank">https://frondend-challenge-app.herokuapp.com/</a>
+
 ## Instructions
 The goal is to build a small app to search musical artists from this GraphQL API endpoint https://graphbrainz.herokuapp.com.
 To achieve this I used several libraries
