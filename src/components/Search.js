@@ -39,6 +39,7 @@ export class Search extends Component{
         this.setState({
             search: e.target.value
         });
+        localStorage.setItem('search', e.target.value);
     }
 
     // Debounce the search to prevent api flood
@@ -54,9 +55,10 @@ export class Search extends Component{
     render() {
         // check if the list is empty
         const { search } = this.state;
+        const searchStorage = localStorage.getItem('search');
         var { res } = "";
-        if(search !== ""){
-        res = search;
+        if(searchStorage !== null){
+        res = searchStorage;
         return (
             <Fragment>
                 <h1 className="display-4 my-3">Artist: {res}</h1>
