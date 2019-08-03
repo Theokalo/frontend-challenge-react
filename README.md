@@ -24,6 +24,11 @@ I created a
     <li><b>Sidebar</b>: In this page you can see all the favorites if exists. Also, you can see this sidebar in every page. In addition you can remove the favorite from every page and you can click on it in order to send you to this specific artist details.</li>
 </ul>
 
+![Image 1](../master/src/assets/image1.png)
+![Image 2](../master/src/assets/image2.png)
+![Image 3](../master/src/assets/image3.png)
+![Image 4](../master/src/assets/image4.png)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
